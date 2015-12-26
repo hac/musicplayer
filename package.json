@@ -10,5 +10,9 @@
     "request": "^2.67.0",
     "socket.io": "*",
     "stylus": "*"
-  }
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "app.js"
 }
