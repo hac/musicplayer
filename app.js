@@ -6,6 +6,9 @@ var express = require('express')
   , nib = require('nib')
 
 var app = express()
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 function compile(str, path) {
   return stylus(str)
     .set('filename', path)
@@ -27,4 +30,8 @@ app.get('/', function (req, res) {
   )
 })
 
-app.listen(3000)
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
+
+http.listen(3000)

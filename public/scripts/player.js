@@ -25,11 +25,11 @@ function randString(n)
 
 function onYouTubeIframeAPIReady() {
 
-	$("body").prepend("<div id='player'>");
+	$("body").append("<div id='player'>");
 	player = new YT.Player('player', {
 		height: '0',
 		width: '0',
-		videoId: 'TINZIfp-xaI',
+//		videoId: 'TINZIfp-xaI',
 		events: {
 			'onReady': onPlayerReady,
 			'onStateChange': onPlayerStateChange
@@ -48,8 +48,22 @@ function onPlayerStateChange(event)
 
 }
 
-define(['jquery'], function($) {
+function playSong(songId)
+{
+	player.loadVideoById({'videoId': songId,
+/*               'startSeconds': 0,
+               'endSeconds': 60,*/
+               'suggestedQuality': 'large'});
+}
+
+define(['jquery', 'socket.io'], function($, io) {
 	
     $.getScript('https://www.youtube.com/iframe_api');
+	
+	$('#songs-list tr').on('dblclick', function() {
+		$('.row-play-button', this).toggleClass('glyphicon-play');
+	});
+	
+    var socket = io();
 	
 });

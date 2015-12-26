@@ -1,25 +1,24 @@
 extend layout
 block includes
-  script(type='text/javascript',src='./scripts/require.js')
-  script(type='text/javascript',src='./scripts/app.js')
+	script(type='text/javascript',src='./scripts/require.js')
+	script(type='text/javascript',src='./scripts/app.js')
 block content
-  p
-    | Vivamus hendrerit arcu sed erat molestie
-    | vehicula. Sed auctor neque eu tellus
-    | rhoncus ut eleifend nibh porttitor. Ut in.
-  p
-    | Donec congue lacinia dui, a porttitor
-    | lectus condimentum laoreet. Nunc eu
-    | ullamcorper orci. Quisque eget odio ac
-    | lectus vestibulum faucibus eget in metus.
-    | In pellentesque faucibus vestibulum. Nulla
-    | at nulla justo, eget luctus tortor.
-block sidebar
-  .widget
-    h1 Widget
-    p
-      | Sed auctor neque eu tellus rhoncus ut
-      | eleifend nibh porttitor. Ut in nulla enim.
-    p
-      | Vivamus hendrerit arcu sed erat molestie
-      | vehicula.
+	table.table.table-hover#songs-list
+		thead
+			tr
+				th(style='width:50px')
+				th Song
+				th Artist
+				th Remix
+				th(style='width:100px;')
+					span.glyphicon.glyphicon-calendar
+				th(style='width:100px;text-align:right;')
+					span.glyphicon.glyphicon-time
+		tr
+			td
+				span.glyphicon.row-play-button
+			td Hello
+			td
+			td
+			td
+			td
