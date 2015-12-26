@@ -5,9 +5,10 @@
   "dependencies": {
     "express": "3.0.0alpha4",
     "jade": "*",
-    "stylus": "*",
+    "kue": "~0.6.2",
     "nib": "*",
-	"kue": "~0.6.2",
-	"socket.io" : "*"
+    "request": "^2.67.0",
+    "socket.io": "*",
+    "stylus": "*"
   }
 }

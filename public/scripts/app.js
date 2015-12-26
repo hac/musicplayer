@@ -10,5 +10,3 @@ requirejs.config({
 		'socket.io': { deps: ['jquery'] }
 		}
 });
-
-require(['bootstrap','player','socket.io']);

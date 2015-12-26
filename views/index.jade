@@ -1,7 +1,7 @@
 extend layout
 block includes
-	script(type='text/javascript',src='./scripts/require.js')
-	script(type='text/javascript',src='./scripts/app.js')
+	script(type='text/javascript').
+		require(['player']);
 block content
 	table.table.table-hover#songs-list
 		thead
@@ -14,11 +14,3 @@ block content
 					span.glyphicon.glyphicon-calendar
 				th(style='width:100px;text-align:right;')
 					span.glyphicon.glyphicon-time
-		tr
-			td
-				span.glyphicon.row-play-button
-			td Hello
-			td
-			td
-			td
-			td

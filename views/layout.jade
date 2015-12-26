@@ -2,6 +2,10 @@ doctype
 html
 	head
 		title #{title} - My Site
+		
+		script(type='text/javascript',src='./scripts/require.js')
+		script(type='text/javascript',src='./scripts/app.js')
+		
 		link(rel='stylesheet', href='bootstrap-3.3.6/css/bootstrap.min.css')
 		link(rel='stylesheet', href='stylesheets/simple-sidebar.css')
 	
@@ -12,7 +16,7 @@ html
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-	block includes
+		block includes
 	
 	body
 		#wrapper
