@@ -9,7 +9,7 @@ var app = express()
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-var jobQueue = require('./simple-job-queue.js');
+//var jobQueue = require('./simple-job-queue.js');
 
 function compile(str, path) {
   return stylus(str)
